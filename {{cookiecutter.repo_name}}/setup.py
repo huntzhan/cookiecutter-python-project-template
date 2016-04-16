@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from __future__ import (division, absolute_import, print_function,
-                        unicode_literals)
+from __future__ import (
+    division, absolute_import, print_function, unicode_literals,
+)
+from builtins import *                  # noqa
+from future.builtins.disabled import *  # noqa
 
 import codecs
 import imp
@@ -42,12 +45,16 @@ setup(
     url=metadata.URL,
     description=metadata.DESCRIPTION,
     long_description=read('README.rst'),
+    # https://pypi.python.org/pypi?:action=list_classifiers
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'License :: OSI Approved :: MIT License',
+        'Development Status :: 1 - Planning',
         'Intended Audience :: Developers',
-        'Topic :: Software Development :: Testing',
-        'Programming Language :: Python',
-        'Operating System :: OS Independent',
+        'Topic :: Software Development :: Libraries',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
     ],
     # critical configurations.
     packages=find_packages(),
